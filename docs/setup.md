@@ -13,7 +13,7 @@ $ source bin/activate
 
 Get project and install the Python dependencies
 ```bash
-$ git clone https://github.com/noiseMap/noise-map-server
+$ git clone --recursive https://github.com/noiseMap/noise-map-server
 $ cd noise-map-server
 $ pip install -r requirements.txt
 ```
@@ -34,3 +34,13 @@ $ ./manage.py runserver
 ```
 
 Open [http://localhost:8000](http://localhost:8000) or the admin interface [http://localhost:8000/admin/](http://localhost:8000/admin/).
+
+
+### Setup client
+
+Collect the static files
+```bash
+$ ./manage.py collectstatic
+```
+
+Open [http://localhost:8000/static/index.html](http://localhost:8000/static/index.html)

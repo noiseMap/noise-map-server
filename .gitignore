@@ -5,6 +5,9 @@
 # Database
 *.sqlite3
 
+# Collected static files
+/static/
+
 ############
 ## Python
 ############
