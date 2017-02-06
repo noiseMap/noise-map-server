@@ -1,0 +1,9 @@
+site_name: The Noise Map
+repo_url: https://github.com/noiseMap/noise-map-server
+repo_name: GitHub
+theme: readthedocs
+site_description: Documentation for the Noise Map
+include_search: true
+pages:
+- ['index.md', 'Home']
+- ['setup.md', 'Developer manuel', 'Setup']
