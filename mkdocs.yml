@@ -7,3 +7,4 @@ include_search: true
 pages:
 - ['index.md', 'Home']
 - ['setup.md', 'Developer manuel', 'Setup']
+- ['tools.md', 'Developer manuel', 'Tools']
