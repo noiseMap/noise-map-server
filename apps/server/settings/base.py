@@ -38,8 +38,9 @@ EXTERNAL_APPS = (
     'rest_framework_gis',                 
 )
 PROJECT_APPS = (
+    'apps.client',
     'apps.noisedata',
-    'apps.client',              
+    'apps.rest'
 )
 INSTALLED_APPS = EXTERNAL_APPS + PROJECT_APPS
 

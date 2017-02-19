@@ -8,3 +8,4 @@ pages:
 - ['index.md', 'Home']
 - ['setup.md', 'Developer manuel', 'Setup']
 - ['tools.md', 'Developer manuel', 'Tools']
+- ['api.md', 'User manuel', 'API']
