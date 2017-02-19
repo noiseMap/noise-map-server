@@ -1,3 +1,3 @@
 [submodule "apps/client/static"]
 	path = apps/client/static
-	url = git@github.com:noiseMap/noise-map-client.git
+	url = https://github.com/noiseMap/noise-map-client.git
