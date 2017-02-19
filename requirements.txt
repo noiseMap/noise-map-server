@@ -2,3 +2,6 @@ Django==1.10.5
 
 # Database
 psycopg2==2.6.2
+
+# Rest
+djangorestframework-gis==0.11
