@@ -1,10 +1,13 @@
-from rest_framework_gis.serializers import GeoFeatureModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from apps.noisedata.models import NoiseData
 
-class NoiseDataSerializer(GeoFeatureModelSerializer):
+class NoiseDataSerializer(ModelSerializer):
+    # TODO: use for geo data
+    # from rest_framework_gis.serializers import GeoFeatureModelSerializer
+    
     class Meta:
         model = NoiseData
-        geo_field = "center"
+        #geo_field = "center"
         
-        fields = ('id', 'center', 'noise_mean_day')
+        fields = '__all__'
