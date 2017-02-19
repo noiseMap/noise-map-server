@@ -9,6 +9,28 @@ $ cd noise_map_workspace
 $ source bin/activate
 ```
 
+### Setup database
+
+
+#### Using Docker
+
+Download PostGIS image from Docker Hub
+```bash
+$ docker pull mdillon/postgis
+```
+
+Run it. (`-p` exposed the port 5432 of the container to the port 5432 of your localhost. 5432 is the default port of PostgreSQL.)
+```bash
+$ docker run --name noisemap-postgres -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD=password -d mdillon/postgis
+```
+
+Connect to the database and create a new database named "noisemap". For instance use psql, the default command line tool of PostgreSQL.
+```bash
+$ psql -h 127.0.0.1 -p 5432 -U postgres
+postgres=# CREATE DATABASE noisemap;
+```
+
+
 ### Setup server
 
 Get project and install the Python dependencies

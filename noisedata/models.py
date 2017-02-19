@@ -1,4 +1,3 @@
-from django.db import models
 from django.contrib.gis.db import models
 
 class NoiseData(models.Model):
@@ -14,12 +13,19 @@ class NoiseData(models.Model):
     noise_mean_24h = models.FloatField()
 
 
-
-
 class Dummy(models.Model):
     name = models.CharField(max_length=150)
     position = models.FloatField()
+    
+    #objects = models.GeoManager()
+    point = models.PointField(dim=3, null=True)
 
-    # Deprecated in Python 3. All Strings are Unicode now.
-    # def __unicode__(self):
-    #    return unicode(self.name)
+    def latitude(self):
+        return self.point.y
+
+    def longitude(self):
+        return self.point.x
+
+    # Output name in admin interface
+    def __unicode__(self):
+        return unicode(self.name)
